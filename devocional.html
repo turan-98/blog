@@ -95,7 +95,7 @@
       <div class="container">
         <div class="group-button">
           <div class="gap">
-            <button class="btn btn-outline-danger -jelly"><i class="fas fa-heart"></i></button>
+            <button class="btn btn-outline-danger -jelly" id="jelly"><i class="fas fa-heart"></i></button>
           </div>
           <div class="gap">
             <button class="btn btn-outline-danger -pulse">Animal</button>
@@ -109,18 +109,10 @@
    btn.addEventListener("click",function(){
      window.history.back();
    })
-    function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
-    } else {
-      localStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
-}
+   var jelly = getElementById("jelly");
+       jelly.addEventListener("click",function(){
+       jelly.style.backgroundColor = "#d9534f"
+   })
   </script>
   <script src="js/index.js"></script>
 </html>
